@@ -8,6 +8,20 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface AwesomeContainer {
     }
+    interface AwesomeFlexCol {
+        "lg": number;
+        "md": number;
+        "rowWidthChanged": (width: number) => Promise<void>;
+        "sm": number;
+        "xl": number;
+        "xs": number;
+        "xxl": number;
+    }
+    interface AwesomeFlexGrid {
+        "baseColumnCount": number;
+    }
+    interface AwesomeFlexRow {
+    }
 }
 declare global {
     interface HTMLAwesomeContainerElement extends Components.AwesomeContainer, HTMLStencilElement {
@@ -16,15 +30,52 @@ declare global {
         prototype: HTMLAwesomeContainerElement;
         new (): HTMLAwesomeContainerElement;
     };
+    interface HTMLAwesomeFlexColElement extends Components.AwesomeFlexCol, HTMLStencilElement {
+    }
+    var HTMLAwesomeFlexColElement: {
+        prototype: HTMLAwesomeFlexColElement;
+        new (): HTMLAwesomeFlexColElement;
+    };
+    interface HTMLAwesomeFlexGridElement extends Components.AwesomeFlexGrid, HTMLStencilElement {
+    }
+    var HTMLAwesomeFlexGridElement: {
+        prototype: HTMLAwesomeFlexGridElement;
+        new (): HTMLAwesomeFlexGridElement;
+    };
+    interface HTMLAwesomeFlexRowElement extends Components.AwesomeFlexRow, HTMLStencilElement {
+    }
+    var HTMLAwesomeFlexRowElement: {
+        prototype: HTMLAwesomeFlexRowElement;
+        new (): HTMLAwesomeFlexRowElement;
+    };
     interface HTMLElementTagNameMap {
         "awesome-container": HTMLAwesomeContainerElement;
+        "awesome-flex-col": HTMLAwesomeFlexColElement;
+        "awesome-flex-grid": HTMLAwesomeFlexGridElement;
+        "awesome-flex-row": HTMLAwesomeFlexRowElement;
     }
 }
 declare namespace LocalJSX {
     interface AwesomeContainer {
     }
+    interface AwesomeFlexCol {
+        "lg"?: number;
+        "md"?: number;
+        "sm"?: number;
+        "xl"?: number;
+        "xs"?: number;
+        "xxl"?: number;
+    }
+    interface AwesomeFlexGrid {
+        "baseColumnCount"?: number;
+    }
+    interface AwesomeFlexRow {
+    }
     interface IntrinsicElements {
         "awesome-container": AwesomeContainer;
+        "awesome-flex-col": AwesomeFlexCol;
+        "awesome-flex-grid": AwesomeFlexGrid;
+        "awesome-flex-row": AwesomeFlexRow;
     }
 }
 export { LocalJSX as JSX };
@@ -32,6 +83,9 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "awesome-container": LocalJSX.AwesomeContainer & JSXBase.HTMLAttributes<HTMLAwesomeContainerElement>;
+            "awesome-flex-col": LocalJSX.AwesomeFlexCol & JSXBase.HTMLAttributes<HTMLAwesomeFlexColElement>;
+            "awesome-flex-grid": LocalJSX.AwesomeFlexGrid & JSXBase.HTMLAttributes<HTMLAwesomeFlexGridElement>;
+            "awesome-flex-row": LocalJSX.AwesomeFlexRow & JSXBase.HTMLAttributes<HTMLAwesomeFlexRowElement>;
         }
     }
 }
