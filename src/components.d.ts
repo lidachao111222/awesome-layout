@@ -9,13 +9,13 @@ export namespace Components {
     interface AwesomeContainer {
     }
     interface AwesomeFlexCol {
-        "lg": number;
-        "md": number;
+        "lg": number | 'auto';
+        "md": number | 'auto';
         "rowWidthChanged": (width: number) => Promise<void>;
-        "sm": number;
-        "xl": number;
-        "xs": number;
-        "xxl": number;
+        "sm": number | 'auto';
+        "xl": number | 'auto';
+        "xs": number | 'auto';
+        "xxl": number | 'auto';
     }
     interface AwesomeFlexGrid {
         "baseColumnCount": number;
@@ -59,12 +59,12 @@ declare namespace LocalJSX {
     interface AwesomeContainer {
     }
     interface AwesomeFlexCol {
-        "lg"?: number;
-        "md"?: number;
-        "sm"?: number;
-        "xl"?: number;
-        "xs"?: number;
-        "xxl"?: number;
+        "lg"?: number | 'auto';
+        "md"?: number | 'auto';
+        "sm"?: number | 'auto';
+        "xl"?: number | 'auto';
+        "xs"?: number | 'auto';
+        "xxl"?: number | 'auto';
     }
     interface AwesomeFlexGrid {
         "baseColumnCount"?: number;
