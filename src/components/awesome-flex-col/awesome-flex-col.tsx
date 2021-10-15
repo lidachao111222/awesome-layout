@@ -9,11 +9,18 @@ import { updateCSSVariable } from '../../utils/access-css-variable';
 export class AwesomeFlexCol implements ComponentInterface {
 
   private set fraction(value: number) {
-    updateCSSVariable('--fraction', value.toString(), this.hostElement);
+    updateCSSVariable('--fraction', value?.toString(), this.hostElement);
+    updateCSSVariable(
+      '--flex',
+      value ?
+        '0 0 calc(var(--fraction) / var(--base-column-count) * 100%)' :
+        '1 1 auto',
+      this.hostElement
+    );
   }
 
   private get actualXs() {
-    return this.xs || 12;
+    return this.xs;
   }
 
   private get actualSm() {
@@ -38,7 +45,7 @@ export class AwesomeFlexCol implements ComponentInterface {
 
   @Element() hostElement: HTMLAwesomeFlexColElement;
 
-  @Prop({ reflect: true }) xs: number = 12;
+  @Prop({ reflect: true }) xs: number;
   @Prop({ reflect: true }) sm: number;
   @Prop({ reflect: true }) md: number;
   @Prop({ reflect: true }) lg: number;
