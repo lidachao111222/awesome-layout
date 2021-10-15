@@ -22,6 +22,10 @@ export namespace Components {
     }
     interface AwesomeFlexRow {
     }
+    interface AwesomeRatioBox {
+        "heightRatio": number;
+        "widthRatio": number;
+    }
 }
 declare global {
     interface HTMLAwesomeContainerElement extends Components.AwesomeContainer, HTMLStencilElement {
@@ -48,11 +52,18 @@ declare global {
         prototype: HTMLAwesomeFlexRowElement;
         new (): HTMLAwesomeFlexRowElement;
     };
+    interface HTMLAwesomeRatioBoxElement extends Components.AwesomeRatioBox, HTMLStencilElement {
+    }
+    var HTMLAwesomeRatioBoxElement: {
+        prototype: HTMLAwesomeRatioBoxElement;
+        new (): HTMLAwesomeRatioBoxElement;
+    };
     interface HTMLElementTagNameMap {
         "awesome-container": HTMLAwesomeContainerElement;
         "awesome-flex-col": HTMLAwesomeFlexColElement;
         "awesome-flex-grid": HTMLAwesomeFlexGridElement;
         "awesome-flex-row": HTMLAwesomeFlexRowElement;
+        "awesome-ratio-box": HTMLAwesomeRatioBoxElement;
     }
 }
 declare namespace LocalJSX {
@@ -71,11 +82,16 @@ declare namespace LocalJSX {
     }
     interface AwesomeFlexRow {
     }
+    interface AwesomeRatioBox {
+        "heightRatio"?: number;
+        "widthRatio"?: number;
+    }
     interface IntrinsicElements {
         "awesome-container": AwesomeContainer;
         "awesome-flex-col": AwesomeFlexCol;
         "awesome-flex-grid": AwesomeFlexGrid;
         "awesome-flex-row": AwesomeFlexRow;
+        "awesome-ratio-box": AwesomeRatioBox;
     }
 }
 export { LocalJSX as JSX };
@@ -86,6 +102,7 @@ declare module "@stencil/core" {
             "awesome-flex-col": LocalJSX.AwesomeFlexCol & JSXBase.HTMLAttributes<HTMLAwesomeFlexColElement>;
             "awesome-flex-grid": LocalJSX.AwesomeFlexGrid & JSXBase.HTMLAttributes<HTMLAwesomeFlexGridElement>;
             "awesome-flex-row": LocalJSX.AwesomeFlexRow & JSXBase.HTMLAttributes<HTMLAwesomeFlexRowElement>;
+            "awesome-ratio-box": LocalJSX.AwesomeRatioBox & JSXBase.HTMLAttributes<HTMLAwesomeRatioBoxElement>;
         }
     }
 }
