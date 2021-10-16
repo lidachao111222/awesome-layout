@@ -10,7 +10,19 @@
 | Name                     | Description                       |
 | ------------------------ | --------------------------------- |
 | `--container-background` | Background of the inner container |
-| `--container-padding`    | padding of the inner container    |
+| `--container-padding`    | Padding of the inner container    |
+| `--lg`                   |                                   |
+| `--md`                   |                                   |
+| `--sm`                   |                                   |
+| `--wrapped-lg`           |                                   |
+| `--wrapped-md`           |                                   |
+| `--wrapped-sm`           |                                   |
+| `--wrapped-xl`           |                                   |
+| `--wrapped-xs`           |                                   |
+| `--wrapped-xxl`          |                                   |
+| `--xl`                   |                                   |
+| `--xs`                   |                                   |
+| `--xxl`                  |                                   |
 
 
 ----------------------------------------------

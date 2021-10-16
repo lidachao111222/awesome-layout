@@ -1,15 +1,32 @@
 :host {
-    --xs: 0;
-    --sm: 576;
-    --md: 768;
-    --lg: 992;
-    --xl: 1200;
-    --xxl: 1400;
+  /**
+   * @prop --xs
+   * @prop --sm
+   * @prop --md
+   * @prop --lg
+   * @prop --xl
+   * @prop --xxl
+   *
+   * @prop --wrapped-xs
+   * @prop --wrapped-sm
+   * @prop --wrapped-md
+   * @prop --wrapped-lg
+   * @prop --wrapped-xl
+   * @prop --wrapped-xxl
+   */
+   
+  --xs: 0;
+  --sm: 576;
+  --md: 768;
+  --lg: 992;
+  --xl: 1200;
+  --xxl: 1400;
   
-    --wrapped-xs: 0;
-    --wrapped-sm: 540;
-    --wrapped-md: 720;
-    --wrapped-lg: 960;
-    --wrapped-xl: 1140;
-    --wrapped-xxl: 1320;
-  }
+  --wrapped-xs: 0;
+  --wrapped-sm: 540;
+  --wrapped-md: 720;
+  --wrapped-lg: 960;
+  --wrapped-xl: 1140;
+  --wrapped-xxl: 1320;
+}
+

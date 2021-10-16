@@ -3,7 +3,7 @@
 :host {
   /**
    * @prop --container-background: Background of the inner container
-   * @prop --container-padding: padding of the inner container
+   * @prop --container-padding: Padding of the inner container
    */
   --container-background: none;
   --container-padding: 0;
