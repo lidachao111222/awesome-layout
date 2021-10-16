@@ -21,7 +21,7 @@
   ],
   "scripts": {
     "build": "stencil build --docs",
-    "build.react": "stencil build --config stencil.config.react.ts",
+    "build.react": "CORE_PROJECT_VERSION=$(npm -s run env echo '$npm_package_version') CORE_PROJECT_PATH=$(pwd) REACT_PROJECT_PATH=../awesome-layout-react && cd $REACT_PROJECT_PATH && npm i --save-exact awesome-layout@$CORE_PROJECT_VERSION && cd $CORE_PROJECT_PATH && stencil build --config stencil.config.react.ts",
     "start": "stencil build --dev --watch --serve",
     "start.no-open": "stencil build --dev --watch --serve --no-open",
     "test": "stencil test --spec --e2e",
