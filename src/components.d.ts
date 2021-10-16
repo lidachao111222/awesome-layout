@@ -8,19 +8,17 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface AwesomeContainer {
     }
-    interface AwesomeFlexCol {
+    interface AwesomeFlex {
+        "baseFraction": number;
+    }
+    interface AwesomeFlexItem {
+        "containerSizeChanged": (size: number) => Promise<void>;
         "lg": number | 'auto';
         "md": number | 'auto';
-        "rowWidthChanged": (width: number) => Promise<void>;
         "sm": number | 'auto';
         "xl": number | 'auto';
         "xs": number | 'auto';
         "xxl": number | 'auto';
-    }
-    interface AwesomeFlexGrid {
-        "baseColumnCount": number;
-    }
-    interface AwesomeFlexRow {
     }
     interface AwesomeRatioBox {
         "heightRatio": number;
@@ -34,23 +32,17 @@ declare global {
         prototype: HTMLAwesomeContainerElement;
         new (): HTMLAwesomeContainerElement;
     };
-    interface HTMLAwesomeFlexColElement extends Components.AwesomeFlexCol, HTMLStencilElement {
+    interface HTMLAwesomeFlexElement extends Components.AwesomeFlex, HTMLStencilElement {
     }
-    var HTMLAwesomeFlexColElement: {
-        prototype: HTMLAwesomeFlexColElement;
-        new (): HTMLAwesomeFlexColElement;
+    var HTMLAwesomeFlexElement: {
+        prototype: HTMLAwesomeFlexElement;
+        new (): HTMLAwesomeFlexElement;
     };
-    interface HTMLAwesomeFlexGridElement extends Components.AwesomeFlexGrid, HTMLStencilElement {
+    interface HTMLAwesomeFlexItemElement extends Components.AwesomeFlexItem, HTMLStencilElement {
     }
-    var HTMLAwesomeFlexGridElement: {
-        prototype: HTMLAwesomeFlexGridElement;
-        new (): HTMLAwesomeFlexGridElement;
-    };
-    interface HTMLAwesomeFlexRowElement extends Components.AwesomeFlexRow, HTMLStencilElement {
-    }
-    var HTMLAwesomeFlexRowElement: {
-        prototype: HTMLAwesomeFlexRowElement;
-        new (): HTMLAwesomeFlexRowElement;
+    var HTMLAwesomeFlexItemElement: {
+        prototype: HTMLAwesomeFlexItemElement;
+        new (): HTMLAwesomeFlexItemElement;
     };
     interface HTMLAwesomeRatioBoxElement extends Components.AwesomeRatioBox, HTMLStencilElement {
     }
@@ -60,16 +52,18 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "awesome-container": HTMLAwesomeContainerElement;
-        "awesome-flex-col": HTMLAwesomeFlexColElement;
-        "awesome-flex-grid": HTMLAwesomeFlexGridElement;
-        "awesome-flex-row": HTMLAwesomeFlexRowElement;
+        "awesome-flex": HTMLAwesomeFlexElement;
+        "awesome-flex-item": HTMLAwesomeFlexItemElement;
         "awesome-ratio-box": HTMLAwesomeRatioBoxElement;
     }
 }
 declare namespace LocalJSX {
     interface AwesomeContainer {
     }
-    interface AwesomeFlexCol {
+    interface AwesomeFlex {
+        "baseFraction"?: number;
+    }
+    interface AwesomeFlexItem {
         "lg"?: number | 'auto';
         "md"?: number | 'auto';
         "sm"?: number | 'auto';
@@ -77,20 +71,14 @@ declare namespace LocalJSX {
         "xs"?: number | 'auto';
         "xxl"?: number | 'auto';
     }
-    interface AwesomeFlexGrid {
-        "baseColumnCount"?: number;
-    }
-    interface AwesomeFlexRow {
-    }
     interface AwesomeRatioBox {
         "heightRatio"?: number;
         "widthRatio"?: number;
     }
     interface IntrinsicElements {
         "awesome-container": AwesomeContainer;
-        "awesome-flex-col": AwesomeFlexCol;
-        "awesome-flex-grid": AwesomeFlexGrid;
-        "awesome-flex-row": AwesomeFlexRow;
+        "awesome-flex": AwesomeFlex;
+        "awesome-flex-item": AwesomeFlexItem;
         "awesome-ratio-box": AwesomeRatioBox;
     }
 }
@@ -99,9 +87,8 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "awesome-container": LocalJSX.AwesomeContainer & JSXBase.HTMLAttributes<HTMLAwesomeContainerElement>;
-            "awesome-flex-col": LocalJSX.AwesomeFlexCol & JSXBase.HTMLAttributes<HTMLAwesomeFlexColElement>;
-            "awesome-flex-grid": LocalJSX.AwesomeFlexGrid & JSXBase.HTMLAttributes<HTMLAwesomeFlexGridElement>;
-            "awesome-flex-row": LocalJSX.AwesomeFlexRow & JSXBase.HTMLAttributes<HTMLAwesomeFlexRowElement>;
+            "awesome-flex": LocalJSX.AwesomeFlex & JSXBase.HTMLAttributes<HTMLAwesomeFlexElement>;
+            "awesome-flex-item": LocalJSX.AwesomeFlexItem & JSXBase.HTMLAttributes<HTMLAwesomeFlexItemElement>;
             "awesome-ratio-box": LocalJSX.AwesomeRatioBox & JSXBase.HTMLAttributes<HTMLAwesomeRatioBoxElement>;
         }
     }

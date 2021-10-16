@@ -1,4 +1,4 @@
-# awesome-flex-col
+# awesome-flex-item
 
 
 
@@ -19,7 +19,7 @@
 
 ## Methods
 
-### `rowWidthChanged(width: number) => Promise<void>`
+### `containerSizeChanged(size: number) => Promise<void>`
 
 
 

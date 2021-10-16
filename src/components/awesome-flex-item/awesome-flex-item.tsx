@@ -1,12 +1,12 @@
-import { Component, Host, h, ComponentInterface, Element, Prop, Method } from '@stencil/core';
+import { Component, Host, h, ComponentInterface, Element, Method, Prop } from '@stencil/core';
 import { updateCSSVariable } from '../../utils/access-css-variable';
 
 @Component({
-  tag: 'awesome-flex-col',
-  styleUrl: 'awesome-flex-col.css',
+  tag: 'awesome-flex-item',
+  styleUrl: 'awesome-flex-item.css',
   shadow: true,
 })
-export class AwesomeFlexCol implements ComponentInterface {
+export class AwesomeFlexItem implements ComponentInterface {
 
   private set fraction(value: number | 'auto') {
     updateCSSVariable('--fraction', value?.toString(), this.hostElement);
@@ -37,7 +37,7 @@ export class AwesomeFlexCol implements ComponentInterface {
     return this.xxl || this.actualXl;
   }
 
-  @Element() hostElement: HTMLAwesomeFlexColElement;
+  @Element() hostElement: HTMLAwesomeFlexItemElement;
 
   @Prop({ reflect: true }) xs: number | 'auto';
   @Prop({ reflect: true }) sm: number | 'auto';
@@ -47,21 +47,21 @@ export class AwesomeFlexCol implements ComponentInterface {
   @Prop({ reflect: true }) xxl: number | 'auto';
 
   @Method()
-  async rowWidthChanged(width: number) {
+  async containerSizeChanged(size: number) {
     switch (true) {
-      case (width >= this.getWrappedViewBreakpoint('xxl')):
+      case (size >= this.getWrappedViewBreakpoint('xxl')):
         this.fraction = this.actualXxl;
         break;
-      case (width >= this.getWrappedViewBreakpoint('xl')):
+      case (size >= this.getWrappedViewBreakpoint('xl')):
         this.fraction = this.actualXl;
         break;
-      case (width >= this.getWrappedViewBreakpoint('lg')):
+      case (size >= this.getWrappedViewBreakpoint('lg')):
         this.fraction = this.actualLg;
         break;
-      case (width >= this.getWrappedViewBreakpoint('md')):
+      case (size >= this.getWrappedViewBreakpoint('md')):
         this.fraction = this.actualMd;
         break;
-      case (width >= this.getWrappedViewBreakpoint('sm')):
+      case (size >= this.getWrappedViewBreakpoint('sm')):
         this.fraction = this.actualSm;
         break;
       default:
@@ -69,7 +69,7 @@ export class AwesomeFlexCol implements ComponentInterface {
     }
   }
 
-  componentWillLoad() {
+  connectedCallback() {
     this.fraction = this.actualXs;
   }
 
@@ -84,11 +84,11 @@ export class AwesomeFlexCol implements ComponentInterface {
   private getWrappedViewBreakpoint(name: string) {
     return +getComputedStyle(this.hostElement).getPropertyValue(`--wrapped-${name}`);
   }
-  
+
   private updateFlexCSSVariable(value: string | number) {
     switch (true) {
       case !Number.isNaN(+value):
-        updateCSSVariable('--flex', '0 0 calc(var(--fraction) / var(--base-column-count) * 100%)', this.hostElement);
+        updateCSSVariable('--flex', '0 0 calc(var(--fraction) / var(--base-fraction) * 100%)', this.hostElement);
         break;
       case value === 'auto':
         updateCSSVariable('--flex', '0 0 auto', this.hostElement);
