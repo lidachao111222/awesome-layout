@@ -19,7 +19,7 @@ export class AwesomeRatioBox implements ComponentInterface {
 
   @Prop({ reflect: true }) widthRatio = 1;
 
-  @Watch('heightRatio')
+  @Watch('widthRatio')
   widthRatioChanged(widthRatio: number) {
     updateCSSVariable('--width-ratio', widthRatio.toString(), this.hostElement);
   }
