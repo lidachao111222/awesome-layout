@@ -1,82 +1,36 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Awesome-Layout</title>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-  <title>awesome-layout</title>
+    <script type="module" src="./build/awesome-layout.esm.js"></script>
+    <script nomodule src="./build/awesome-layout.js"></script>
 
-  <script type="module" src="./build/awesome-layout.esm.js"></script>
-  <script nomodule src="./build/awesome-layout.js"></script>
-</head>
+    <link rel="stylesheet" href="./pages/global.css" />
+  </head>
 
-<body>
-  <awesome-container>
-    <h1 style="text-align: center;">Welcome to the awesome-layout</h1>
-    <div style="background-color: slateblue; text-align: center;">
-      This is awesome-container demo
-    </div>
-    <h2 style="text-align: center;">awesome-flex demo</h2>
-      <awesome-flex>
-        <awesome-flex-item xs="12" style="padding: .25rem;">
-          <div style="height: 50px; width: 100%; border: 1px solid palevioletred;">View 1</div>
-        </awesome-flex-item>
-        <awesome-flex-item xs="12" sm="5" md="4" lg="3" xl="2" style="padding: .25rem;">
-          <div style="height: 300px; width: 100%; border: 1px solid paleturquoise;">View 2</div>
-        </awesome-flex-item>
-        <awesome-flex-item xs="12" sm="7" md="4" lg="5" xl="7" xxl="8" style="padding: .25rem;">
-          <div style="height: 300px; width: 100%; border: 1px solid turquoise;">View 3</div>
-        </awesome-flex-item>
-        <awesome-flex-item xs="12" md="4" lg="4" xl="3" xxl="2" style="padding: .25rem;">
-          <div style="height: 300px; width: 100%; border: 1px solid lightgreen;">View 4</div>
-        </awesome-flex-item>
-        <awesome-flex-item xs="12" style="padding: .25rem;">
-          <div style="height: 50px; width: 100%; border: 1px solid cornflowerblue;">View 5</div>
-        </awesome-flex-item>
-      </awesome-flex>
-      <awesome-flex>
-        <awesome-flex-item>
-          <awesome-ratio-box width-ratio="16" height-ratio="9">
-            <div style="height: 100%; width: 100%; border: 1px solid cornflowerblue;"></div>
-          </awesome-ratio-box>
-        </awesome-flex-item>
-        <awesome-flex-item>
-          <awesome-ratio-box width-ratio="16" height-ratio="9">
-            <div style="height: 100%; width: 100%; border: 1px solid cornflowerblue;"></div>
-          </awesome-ratio-box>
-        </awesome-flex-item>
-        <awesome-flex-item>
-          <awesome-ratio-box width-ratio="16" height-ratio="9">
-            <div style="height: 100%; width: 100%; border: 1px solid cornflowerblue;"></div>
-          </awesome-ratio-box>
-        </awesome-flex-item>
-      </awesome-flex>
-      <awesome-flex>
-        <awesome-flex-item>
-          <div style="height: 50px; width: 100%; border: 1px solid cornflowerblue;"></div>
-        </awesome-flex-item>
-        <awesome-flex-item md="6" xl="3">
-          <div style="height: 50px; width: 100%; border: 1px solid cornflowerblue;"></div>
-        </awesome-flex-item>
-        <awesome-flex-item>
-          <div style="height: 50px; width: 100%; border: 1px solid cornflowerblue;"></div>
-        </awesome-flex-item>
-      </awesome-flex>
-      <awesome-flex>
-        <awesome-flex-item xs="auto">
-          <div style="height: 50px; width: 200px; border: 1px solid cornflowerblue;"></div>
-        </awesome-flex-item>
-        <awesome-flex-item xs="auto">
-          <div style="height: 50px; width: 300px; border: 1px solid cornflowerblue;"></div>
-        </awesome-flex-item>
-        <awesome-flex-item>
-          <div style="height: 50px; width: 100%; border: 1px solid cornflowerblue;"></div>
-        </awesome-flex-item>
-      </awesome-flex>
-      <awesome-ratio-box width-factor="16" height-factor="9">
-        <div style="height: 100%; width: 100%; border: 1px solid paleturquoise;">View 2</div>
-      </awesome-ratio-box>
-  </awesome-container>
-</body>
+  <body>
+    <script defer>
+      async function fetchPageContent(url, containerSelector) {
+        const baseUrl = './pages/';
+        const response = await fetch(`${baseUrl}${url}`);
+        const htmlContent = await response.text();
+        const containerElement = document.querySelector(containerSelector);
+        containerElement.innerHTML = htmlContent;
+      }
 
+      fetchPageContent('container.html', '#container-section');
+      fetchPageContent('flex.html', '#flex-section');
+      fetchPageContent('ratio-box.html', '#ratio-box-section');
+    </script>
+
+    <awesome-container>
+      <h1 style="text-align: center">Awesome-Layout</h1>
+      <div id="container-section"></div>
+      <div id="flex-section"></div>
+      <div id="ratio-box-section"></div>
+    </awesome-container>
+  </body>
 </html>
