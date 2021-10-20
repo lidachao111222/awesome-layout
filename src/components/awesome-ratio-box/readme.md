@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property      | Attribute      | Description          | Type     | Default |
-| ------------- | -------------- | -------------------- | -------- | ------- |
-| `heightRatio` | `height-ratio` | The ratio of height. | `number` | `1`     |
-| `widthRatio`  | `width-ratio`  | The ratio of width.  | `number` | `1`     |
+| Property       | Attribute       | Description           | Type     | Default |
+| -------------- | --------------- | --------------------- | -------- | ------- |
+| `heightFactor` | `height-factor` | The factor of height. | `number` | `1`     |
+| `widthFactor`  | `width-factor`  | The factor of width.  | `number` | `1`     |
 
 
 ----------------------------------------------

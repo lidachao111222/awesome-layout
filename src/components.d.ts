@@ -43,13 +43,13 @@ export namespace Components {
     }
     interface AwesomeRatioBox {
         /**
-          * The ratio of height.
+          * The factor of height.
          */
-        "heightRatio": number;
+        "heightFactor": number;
         /**
-          * The ratio of width.
+          * The factor of width.
          */
-        "widthRatio": number;
+        "widthFactor": number;
     }
 }
 declare global {
@@ -121,13 +121,13 @@ declare namespace LocalJSX {
     }
     interface AwesomeRatioBox {
         /**
-          * The ratio of height.
+          * The factor of height.
          */
-        "heightRatio"?: number;
+        "heightFactor"?: number;
         /**
-          * The ratio of width.
+          * The factor of width.
          */
-        "widthRatio"?: number;
+        "widthFactor"?: number;
     }
     interface IntrinsicElements {
         "awesome-container": AwesomeContainer;

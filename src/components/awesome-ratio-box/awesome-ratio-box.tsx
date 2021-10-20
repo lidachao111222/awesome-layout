@@ -11,28 +11,28 @@ export class AwesomeRatioBox implements ComponentInterface {
   @Element() hostElement: HTMLAwesomeRatioBoxElement;
 
   /**
-   * The ratio of height.
+   * The factor of height.
    */
-  @Prop({ reflect: true }) heightRatio = 1;
+  @Prop({ reflect: true }) heightFactor = 1;
 
-  @Watch('heightRatio')
-  heightRatioChanged(heightRatio: number) {
-    updateCSSVariable('--height-ratio', heightRatio.toString(), this.hostElement);
+  @Watch('heightFactor')
+  heightFactorChanged(heightFactor: number) {
+    updateCSSVariable('--height-factor', heightFactor.toString(), this.hostElement);
   }
 
   /**
-   * The ratio of width.
+   * The factor of width.
    */
-  @Prop({ reflect: true }) widthRatio = 1;
+  @Prop({ reflect: true }) widthFactor = 1;
 
-  @Watch('widthRatio')
-  widthRatioChanged(widthRatio: number) {
-    updateCSSVariable('--width-ratio', widthRatio.toString(), this.hostElement);
+  @Watch('widthFactor')
+  widthFactorChanged(widthFactor: number) {
+    updateCSSVariable('--width-factor', widthFactor.toString(), this.hostElement);
   }
 
   connectedCallback() {
-    this.heightRatioChanged(this.heightRatio);
-    this.widthRatioChanged(this.widthRatio);
+    this.heightFactorChanged(this.heightFactor);
+    this.widthFactorChanged(this.widthFactor);
   }
 
   render() {
