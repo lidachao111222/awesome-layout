@@ -10,6 +10,9 @@ export class AwesomeRatioBox implements ComponentInterface {
 
   @Element() hostElement: HTMLAwesomeRatioBoxElement;
 
+  /**
+   * The ratio of height.
+   */
   @Prop({ reflect: true }) heightRatio = 1;
 
   @Watch('heightRatio')
@@ -17,6 +20,9 @@ export class AwesomeRatioBox implements ComponentInterface {
     updateCSSVariable('--height-ratio', heightRatio.toString(), this.hostElement);
   }
 
+  /**
+   * The ratio of width.
+   */
   @Prop({ reflect: true }) widthRatio = 1;
 
   @Watch('widthRatio')

@@ -39,13 +39,37 @@ export class AwesomeFlexItem implements ComponentInterface {
 
   @Element() hostElement: HTMLAwesomeFlexItemElement;
 
+  /**
+   * The portion of the flex item spans for xs view breakpoint.
+   */
   @Prop({ reflect: true }) xs: number | 'auto';
+
+  /**
+   * The portion of the flex item spans for sm view breakpoint.
+   */
   @Prop({ reflect: true }) sm: number | 'auto';
+
+  /**
+   * The portion of the flex item spans for md view breakpoint.
+   */
   @Prop({ reflect: true }) md: number | 'auto';
+
+  /**
+   * The portion of the flex item spans for lg view breakpoint.
+   */
   @Prop({ reflect: true }) lg: number | 'auto';
+
+  /**
+   * The portion of the flex item spans for xl view breakpoint.
+   */
   @Prop({ reflect: true }) xl: number | 'auto';
+
+  /**
+   * The portion of the flex item spans for xxl view breakpoint.
+   */
   @Prop({ reflect: true }) xxl: number | 'auto';
 
+  /** @internal */
   @Method()
   async containerSizeChanged(size: number) {
     switch (true) {

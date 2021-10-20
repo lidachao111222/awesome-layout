@@ -13,6 +13,9 @@ export class AwesomeFlex implements ComponentInterface {
 
   @Element() hostElement: HTMLAwesomeFlexElement;
 
+  /**
+   * The number of portions that the flex container is split into.
+   */
   @Prop({ reflect: true }) baseFraction = 12;
 
   @Watch('baseFraction')

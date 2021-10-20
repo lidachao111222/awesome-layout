@@ -1,18 +1,18 @@
 :host {
   /**
-   * @prop --xs
-   * @prop --sm
-   * @prop --md
-   * @prop --lg
-   * @prop --xl
-   * @prop --xxl
+   * @prop --xs: The default value is 0.
+   * @prop --sm: The default value is 576.
+   * @prop --md: The default value is 768.
+   * @prop --lg: The default value is 992.
+   * @prop --xl: The default value is 1200.
+   * @prop --xxl: The default value is 1400.
    *
-   * @prop --wrapped-xs
-   * @prop --wrapped-sm
-   * @prop --wrapped-md
-   * @prop --wrapped-lg
-   * @prop --wrapped-xl
-   * @prop --wrapped-xxl
+   * @prop --wrapped-xs: The default value is 0.
+   * @prop --wrapped-sm: The default value is 540.
+   * @prop --wrapped-md: The default value is 720.
+   * @prop --wrapped-lg: The default value is 960.
+   * @prop --wrapped-xl: The default value is 1140.
+   * @prop --wrapped-xxl: The default value is 1320.
    */
    
   --xs: 0;

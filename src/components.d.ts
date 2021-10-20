@@ -9,19 +9,46 @@ export namespace Components {
     interface AwesomeContainer {
     }
     interface AwesomeFlex {
+        /**
+          * The number of portions that the flex container is split into.
+         */
         "baseFraction": number;
     }
     interface AwesomeFlexItem {
         "containerSizeChanged": (size: number) => Promise<void>;
+        /**
+          * The portion of the flex item spans for lg view breakpoint.
+         */
         "lg": number | 'auto';
+        /**
+          * The portion of the flex item spans for md view breakpoint.
+         */
         "md": number | 'auto';
+        /**
+          * The portion of the flex item spans for sm view breakpoint.
+         */
         "sm": number | 'auto';
+        /**
+          * The portion of the flex item spans for xl view breakpoint.
+         */
         "xl": number | 'auto';
+        /**
+          * The portion of the flex item spans for xs view breakpoint.
+         */
         "xs": number | 'auto';
+        /**
+          * The portion of the flex item spans for xxl view breakpoint.
+         */
         "xxl": number | 'auto';
     }
     interface AwesomeRatioBox {
+        /**
+          * The ratio of height.
+         */
         "heightRatio": number;
+        /**
+          * The ratio of width.
+         */
         "widthRatio": number;
     }
 }
@@ -61,18 +88,45 @@ declare namespace LocalJSX {
     interface AwesomeContainer {
     }
     interface AwesomeFlex {
+        /**
+          * The number of portions that the flex container is split into.
+         */
         "baseFraction"?: number;
     }
     interface AwesomeFlexItem {
+        /**
+          * The portion of the flex item spans for lg view breakpoint.
+         */
         "lg"?: number | 'auto';
+        /**
+          * The portion of the flex item spans for md view breakpoint.
+         */
         "md"?: number | 'auto';
+        /**
+          * The portion of the flex item spans for sm view breakpoint.
+         */
         "sm"?: number | 'auto';
+        /**
+          * The portion of the flex item spans for xl view breakpoint.
+         */
         "xl"?: number | 'auto';
+        /**
+          * The portion of the flex item spans for xs view breakpoint.
+         */
         "xs"?: number | 'auto';
+        /**
+          * The portion of the flex item spans for xxl view breakpoint.
+         */
         "xxl"?: number | 'auto';
     }
     interface AwesomeRatioBox {
+        /**
+          * The ratio of height.
+         */
         "heightRatio"?: number;
+        /**
+          * The ratio of width.
+         */
         "widthRatio"?: number;
     }
     interface IntrinsicElements {
