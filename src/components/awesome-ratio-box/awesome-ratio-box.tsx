@@ -1,4 +1,6 @@
-import { Component, Host, h, ComponentInterface, Element, Prop, Watch } from '@stencil/core';
+import type { ComponentInterface } from '@stencil/core';
+import { Component, Host, h, Element, Prop, Watch } from '@stencil/core';
+
 import { updateCSSVariable } from '../../utils/access-css-variable';
 
 @Component({
