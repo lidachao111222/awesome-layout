@@ -6,6 +6,8 @@ An awesome way to do layout.
 
 [Demo](https://lidachao111222.github.io/awesome-layout/)
 
+[![Edit awesome-layout-demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/awesome-layout-demo-vb4xl?fontsize=14&hidenavigation=1&theme=dark)
+
 ## Installation
 
 ### From NPM
