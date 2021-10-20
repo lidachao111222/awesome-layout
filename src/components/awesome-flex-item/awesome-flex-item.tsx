@@ -8,7 +8,7 @@ import { updateCSSVariable } from '../../utils/access-css-variable';
 })
 export class AwesomeFlexItem implements ComponentInterface {
 
-  private set fraction(value: number | 'auto') {
+  private set fraction(value: number | 'auto' | '') {
     updateCSSVariable('--fraction', value?.toString(), this.hostElement);
     this.updateFlexCSSVariable(value);
   }
@@ -42,32 +42,32 @@ export class AwesomeFlexItem implements ComponentInterface {
   /**
    * The portion of the flex item spans for xs view breakpoint.
    */
-  @Prop({ reflect: true }) xs: number | 'auto';
+  @Prop({ reflect: true }) xs: number | 'auto' | '';
 
   /**
    * The portion of the flex item spans for sm view breakpoint.
    */
-  @Prop({ reflect: true }) sm: number | 'auto';
+  @Prop({ reflect: true }) sm: number | 'auto' | '';
 
   /**
    * The portion of the flex item spans for md view breakpoint.
    */
-  @Prop({ reflect: true }) md: number | 'auto';
+  @Prop({ reflect: true }) md: number | 'auto' | '';
 
   /**
    * The portion of the flex item spans for lg view breakpoint.
    */
-  @Prop({ reflect: true }) lg: number | 'auto';
+  @Prop({ reflect: true }) lg: number | 'auto' | '';
 
   /**
    * The portion of the flex item spans for xl view breakpoint.
    */
-  @Prop({ reflect: true }) xl: number | 'auto';
+  @Prop({ reflect: true }) xl: number | 'auto' | '';
 
   /**
    * The portion of the flex item spans for xxl view breakpoint.
    */
-  @Prop({ reflect: true }) xxl: number | 'auto';
+  @Prop({ reflect: true }) xxl: number | 'auto' | '';
 
   /** @internal */
   @Method()
@@ -111,12 +111,13 @@ export class AwesomeFlexItem implements ComponentInterface {
 
   private updateFlexCSSVariable(value: string | number) {
     switch (true) {
-      case !Number.isNaN(+value):
+      case value !== '' && !Number.isNaN(+value):
         updateCSSVariable('--flex', '0 0 calc(var(--fraction) / var(--base-fraction) * 100%)', this.hostElement);
         break;
       case value === 'auto':
         updateCSSVariable('--flex', '0 0 auto', this.hostElement);
         break;
+      case value === '':
       default:
         updateCSSVariable('--flex', '1 1 auto', this.hostElement);
         break;

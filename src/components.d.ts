@@ -19,27 +19,27 @@ export namespace Components {
         /**
           * The portion of the flex item spans for lg view breakpoint.
          */
-        "lg": number | 'auto';
+        "lg": number | 'auto' | '';
         /**
           * The portion of the flex item spans for md view breakpoint.
          */
-        "md": number | 'auto';
+        "md": number | 'auto' | '';
         /**
           * The portion of the flex item spans for sm view breakpoint.
          */
-        "sm": number | 'auto';
+        "sm": number | 'auto' | '';
         /**
           * The portion of the flex item spans for xl view breakpoint.
          */
-        "xl": number | 'auto';
+        "xl": number | 'auto' | '';
         /**
           * The portion of the flex item spans for xs view breakpoint.
          */
-        "xs": number | 'auto';
+        "xs": number | 'auto' | '';
         /**
           * The portion of the flex item spans for xxl view breakpoint.
          */
-        "xxl": number | 'auto';
+        "xxl": number | 'auto' | '';
     }
     interface AwesomeRatioBox {
         /**
@@ -97,27 +97,27 @@ declare namespace LocalJSX {
         /**
           * The portion of the flex item spans for lg view breakpoint.
          */
-        "lg"?: number | 'auto';
+        "lg"?: number | 'auto' | '';
         /**
           * The portion of the flex item spans for md view breakpoint.
          */
-        "md"?: number | 'auto';
+        "md"?: number | 'auto' | '';
         /**
           * The portion of the flex item spans for sm view breakpoint.
          */
-        "sm"?: number | 'auto';
+        "sm"?: number | 'auto' | '';
         /**
           * The portion of the flex item spans for xl view breakpoint.
          */
-        "xl"?: number | 'auto';
+        "xl"?: number | 'auto' | '';
         /**
           * The portion of the flex item spans for xs view breakpoint.
          */
-        "xs"?: number | 'auto';
+        "xs"?: number | 'auto' | '';
         /**
           * The portion of the flex item spans for xxl view breakpoint.
          */
-        "xxl"?: number | 'auto';
+        "xxl"?: number | 'auto' | '';
     }
     interface AwesomeRatioBox {
         /**
