@@ -40,32 +40,44 @@ export class AwesomeFlexItem implements ComponentInterface {
   @Element() hostElement: HTMLAwesomeFlexItemElement;
 
   /**
-   * The portion of the flex item spans for xs view breakpoint.
+   * The size of the flex item for xs screens, in terms of how many portions it should take up out of the total available. 
+   * If `"auto"` is passed, it will be the size of its content. 
+   * If nothing or `""` is passed, all flex item without setting the size will share the remaining space equally.
    */
   @Prop({ reflect: true }) xs: number | 'auto' | '';
 
   /**
-   * The portion of the flex item spans for sm view breakpoint.
+   * The size of the flex item for sm screens, in terms of how many portions it should take up out of the total available. 
+   * If `"auto"` is passed, it will be the size of its content. 
+   * If nothing or `""` is passed, all flex item without setting the size will share the remaining space equally.
    */
   @Prop({ reflect: true }) sm: number | 'auto' | '';
 
   /**
-   * The portion of the flex item spans for md view breakpoint.
+   * The size of the flex item for md screens, in terms of how many portions it should take up out of the total available. 
+   * If `"auto"` is passed, it will be the size of its content. 
+   * If nothing or `""` is passed, all flex item without setting the size will share the remaining space equally.
    */
   @Prop({ reflect: true }) md: number | 'auto' | '';
 
   /**
-   * The portion of the flex item spans for lg view breakpoint.
+   * The size of the flex item for lg screens, in terms of how many portions it should take up out of the total available. 
+   * If `"auto"` is passed, it will be the size of its content. 
+   * If nothing or `""` is passed, all flex item without setting the size will share the remaining space equally.
    */
   @Prop({ reflect: true }) lg: number | 'auto' | '';
 
   /**
-   * The portion of the flex item spans for xl view breakpoint.
+   * The size of the flex item for xl screens, in terms of how many portions it should take up out of the total available. 
+   * If `"auto"` is passed, it will be the size of its content. 
+   * If nothing or `""` is passed, all flex item without setting the size will share the remaining space equally.
    */
   @Prop({ reflect: true }) xl: number | 'auto' | '';
 
   /**
-   * The portion of the flex item spans for xxl view breakpoint.
+   * The size of the flex item for xxl screens, in terms of how many portions it should take up out of the total available. 
+   * If `"auto"` is passed, it will be the size of its content. 
+   * If nothing or `""` is passed, all flex item without setting the size will share the remaining space equally.
    */
   @Prop({ reflect: true }) xxl: number | 'auto' | '';
 
