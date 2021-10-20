@@ -2,4 +2,9 @@
 
 # Awesome-Layout
 
-An better way to do auto layout.
+An awesome way to do layout.
+
+## Usage
+- [Container](./src/components/awesome-container/readme.md)
+- [Flex](./src/components/awesome-flex/readme.md)
+- [Ratio Box](./src/components/awesome-retio-box/readme.md)
