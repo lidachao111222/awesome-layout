@@ -24,4 +24,4 @@ Note that `type="module"` only works in modern browsers.
 ## Usage
 - [Container](./src/components/awesome-container/readme.md)
 - [Flex](./src/components/awesome-flex/readme.md)
-- [Ratio Box](./src/components/awesome-retio-box/readme.md)
+- [Ratio Box](./src/components/awesome-ratio-box/readme.md)
