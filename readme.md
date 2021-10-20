@@ -2,7 +2,22 @@
 
 # Awesome-Layout
 
-An awesome way to do layout.
+An awesome way to do layout.  
+
+[Demo](https://lidachao111222.github.io/awesome-layout/)
+
+## Installation
+
+### From NPM
+```sh
+npm i awesome-layout
+```
+
+### From CDN
+```html
+<script type="module" src="https://unpkg.com/awesome-layout"></script>
+```
+Note that `type="module"` only works in modern browsers.
 
 ## Usage
 - [Container](./src/components/awesome-container/readme.md)
