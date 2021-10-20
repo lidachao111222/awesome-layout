@@ -1,0 +1,1 @@
+function n(n,u,l){null==l||l.style.setProperty(n,u)}export{n as u}
