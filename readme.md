@@ -19,9 +19,46 @@ npm i awesome-layout
 ```html
 <script type="module" src="https://unpkg.com/awesome-layout"></script>
 ```
-Note that `type="module"` only works in modern browsers.
 
 ## Usage
 - [Container](./src/components/awesome-container/readme.md)
 - [Flex](./src/components/awesome-flex/readme.md)
 - [Ratio Box](./src/components/awesome-ratio-box/readme.md)
+
+## Importing
+
+### Using `<script>` tag
+You can either grab the code [using CDN](#from-cdn) or [using NPM](#from-npm).  
+If you grab it from the CDN, then you just need to directly put the below code into your HTML file.
+```html
+<script type="module" src="https://unpkg.com/awesome-layout"></script>
+```
+If you grab it from NPM, then you might need ajust the `src`. The code should be located at _node_modules/awesome-layout/dist/awesome-layout/awesome-layout.esm.js_.  
+Note that `type="module"` is an ES6 syntax and only works in modern browsers. It is required to use `type="module"` and we do not provide the ES5 version.
+
+### Using loader
+If you need to import inside JavaScript code, using the loader is the suggested way. Basically, you want to call `defineCustomElements()` from the loader. Optionally, you can call `applyPolyfills() ` first. For different project types, please check below sections for more details.
+
+### Vanilla JS
+First, [install using NPM](#from-npm).  
+Then put below code in your JS file.
+```js
+import { defineCustomElements } from "node_modules/awesome-layout/loader";
+defineCustomElements();
+```
+And make sure you import this JS file using `type="module"` like below.
+```html
+<script type="module" src="path/to/the/js/file"></script>
+```
+Note that `type="module"` is an ES6 syntax and only works in modern browsers. 
+You can check [here](https://stenciljs.com/docs/javascript) for more details.
+
+### Angular
+Please check [here](https://stenciljs.com/docs/angular) for details. Just make sure you import `defineCustomElements()` from _node_modules/awesome-layout/loader_ instead.
+
+### React
+We suggest to use our React wrapper package [awesome-layout-react](https://www.npmjs.com/package/awesome-layout-react).  
+However, if you still want to use the web component directly, please check [here](https://stenciljs.com/docs/react) for details. Just make sure you import `defineCustomElements()` from _node_modules/awesome-layout/loader_ instead.
+
+### Vue
+Please check [here](https://stenciljs.com/docs/vue) for details. Just make sure you import `defineCustomElements()` from _node_modules/awesome-layout/loader_ instead. In addition, when you ignore elements, you should ignore all elements starting with `awesome-`.
