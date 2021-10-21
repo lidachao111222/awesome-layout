@@ -1,5 +1,3 @@
-@import '../../utils/view-breakpoints.css';
-
 :host {
   display: flex;
   flex-wrap: wrap;

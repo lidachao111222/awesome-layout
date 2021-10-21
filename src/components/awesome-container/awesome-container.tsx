@@ -35,32 +35,32 @@ export class AwesomeContainer implements ComponentInterface {
   private updateContentMaxWidthForViewBreakpoint(entry: ResizeObserverEntry) {
     const width = entry.contentRect.width;
     switch (true) {
-      case (width >= this.getViewBreakpoint('xxl')):
-        updateCSSVariable('--content-max-width', `${this.getWrappedViewBreakpoint('xxl')}px`, this.hostElement);
+      case (width >= this.getOuterBreakpoint('xxl')):
+        updateCSSVariable('--content-max-width', `${this.getViewBreakpoint('xxl')}px`, this.hostElement);
         break;
-      case (width >= this.getViewBreakpoint('xl')):
-        updateCSSVariable('--content-max-width', `${this.getWrappedViewBreakpoint('xl')}px`, this.hostElement);
+      case (width >= this.getOuterBreakpoint('xl')):
+        updateCSSVariable('--content-max-width', `${this.getViewBreakpoint('xl')}px`, this.hostElement);
         break;
-      case (width >= this.getViewBreakpoint('lg')):
-        updateCSSVariable('--content-max-width', `${this.getWrappedViewBreakpoint('lg')}px`, this.hostElement);
+      case (width >= this.getOuterBreakpoint('lg')):
+        updateCSSVariable('--content-max-width', `${this.getViewBreakpoint('lg')}px`, this.hostElement);
         break;
-      case (width >= this.getViewBreakpoint('md')):
-        updateCSSVariable('--content-max-width', `${this.getWrappedViewBreakpoint('md')}px`, this.hostElement);
+      case (width >= this.getOuterBreakpoint('md')):
+        updateCSSVariable('--content-max-width', `${this.getViewBreakpoint('md')}px`, this.hostElement);
         break;
-      case (width >= this.getViewBreakpoint('sm')):
-        updateCSSVariable('--content-max-width', `${this.getWrappedViewBreakpoint('sm')}px`, this.hostElement);
+      case (width >= this.getOuterBreakpoint('sm')):
+        updateCSSVariable('--content-max-width', `${this.getViewBreakpoint('sm')}px`, this.hostElement);
         break;
       default:
         updateCSSVariable('--content-max-width', `100%`, this.hostElement);
     }
   }
 
-  private getViewBreakpoint(name: string) {
-    return +getComputedStyle(this.hostElement).getPropertyValue(`--${name}`);
+  private getOuterBreakpoint(name: string) {
+    return +getComputedStyle(this.hostElement).getPropertyValue(`--outer-${name}`);
   }
 
-  private getWrappedViewBreakpoint(name: string) {
-    return +getComputedStyle(this.hostElement).getPropertyValue(`--wrapped-${name}`);
+  private getViewBreakpoint(name: string) {
+    return +getComputedStyle(this.hostElement).getPropertyValue(`--${name}`);
   }
 
 }

@@ -85,19 +85,19 @@ export class AwesomeFlexItem implements ComponentInterface {
   @Method()
   async containerSizeChanged(size: number) {
     switch (true) {
-      case (size >= this.getWrappedViewBreakpoint('xxl')):
+      case (size >= this.getViewBreakpoint('xxl')):
         this.fraction = this.actualXxl;
         break;
-      case (size >= this.getWrappedViewBreakpoint('xl')):
+      case (size >= this.getViewBreakpoint('xl')):
         this.fraction = this.actualXl;
         break;
-      case (size >= this.getWrappedViewBreakpoint('lg')):
+      case (size >= this.getViewBreakpoint('lg')):
         this.fraction = this.actualLg;
         break;
-      case (size >= this.getWrappedViewBreakpoint('md')):
+      case (size >= this.getViewBreakpoint('md')):
         this.fraction = this.actualMd;
         break;
-      case (size >= this.getWrappedViewBreakpoint('sm')):
+      case (size >= this.getViewBreakpoint('sm')):
         this.fraction = this.actualSm;
         break;
       default:
@@ -117,8 +117,8 @@ export class AwesomeFlexItem implements ComponentInterface {
     );
   }
 
-  private getWrappedViewBreakpoint(name: string) {
-    return +getComputedStyle(this.hostElement).getPropertyValue(`--wrapped-${name}`);
+  private getViewBreakpoint(name: string) {
+    return +getComputedStyle(this.hostElement).getPropertyValue(`--${name}`);
   }
 
   private updateFlexCSSVariable(value: string | number) {

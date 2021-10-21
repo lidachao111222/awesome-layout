@@ -1,32 +1,17 @@
 :host {
   /**
-   * @prop --xs: The default value is 0.
-   * @prop --sm: The default value is 576.
-   * @prop --md: The default value is 768.
-   * @prop --lg: The default value is 992.
-   * @prop --xl: The default value is 1200.
-   * @prop --xxl: The default value is 1400.
-   *
-   * @prop --wrapped-xs: The default value is 0.
-   * @prop --wrapped-sm: The default value is 540.
-   * @prop --wrapped-md: The default value is 720.
-   * @prop --wrapped-lg: The default value is 960.
-   * @prop --wrapped-xl: The default value is 1140.
-   * @prop --wrapped-xxl: The default value is 1320.
+   * @prop --xs: The view breakpoint for xs.
+   * @prop --sm: The view breakpoint for sm.
+   * @prop --md: The view breakpoint for md.
+   * @prop --lg: The view breakpoint for lg.
+   * @prop --xl: The view breakpoint for xl.
+   * @prop --xxl: The view breakpoint for xxl.
    */
-   
-  --xs: 0;
-  --sm: 576;
-  --md: 768;
-  --lg: 992;
-  --xl: 1200;
-  --xxl: 1400;
-  
-  --wrapped-xs: 0;
-  --wrapped-sm: 540;
-  --wrapped-md: 720;
-  --wrapped-lg: 960;
-  --wrapped-xl: 1140;
-  --wrapped-xxl: 1320;
-}
 
+  --xs: 0;
+  --sm: 540;
+  --md: 720;
+  --lg: 960;
+  --xl: 1140;
+  --xxl: 1320;
+}

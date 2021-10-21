@@ -8,6 +8,21 @@
   --container-background: none;
   --container-padding: 0;
 
+  /**
+   * @prop --outer-xs: The outer view breakpoint of xs.
+   * @prop --outer-sm: The outer view breakpoint of sm.
+   * @prop --outer-md: The outer view breakpoint of md.
+   * @prop --outer-lg: The outer view breakpoint of lg.
+   * @prop --outer-xl: The outer view breakpoint of xl.
+   * @prop --outer-xxl: The outer view breakpoint of xxl.
+   */  
+   --outer-xs: 0;
+   --outer-sm: 576;
+   --outer-md: 768;
+   --outer-lg: 992;
+   --outer-xl: 1200;
+   --outer-xxl: 1400;
+
   display: block;
 }
 

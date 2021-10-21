@@ -7,14 +7,14 @@ Also check [Flex](../awesome-flex/readme.md).
 
 ## Properties
 
-| Property | Attribute | Description                                                 | Type                     | Default     |
-| -------- | --------- | ----------------------------------------------------------- | ------------------------ | ----------- |
-| `lg`     | `lg`      | The portion of the flex item spans for lg view breakpoint.  | `"" \| "auto" \| number` | `undefined` |
-| `md`     | `md`      | The portion of the flex item spans for md view breakpoint.  | `"" \| "auto" \| number` | `undefined` |
-| `sm`     | `sm`      | The portion of the flex item spans for sm view breakpoint.  | `"" \| "auto" \| number` | `undefined` |
-| `xl`     | `xl`      | The portion of the flex item spans for xl view breakpoint.  | `"" \| "auto" \| number` | `undefined` |
-| `xs`     | `xs`      | The portion of the flex item spans for xs view breakpoint.  | `"" \| "auto" \| number` | `undefined` |
-| `xxl`    | `xxl`     | The portion of the flex item spans for xxl view breakpoint. | `"" \| "auto" \| number` | `undefined` |
+| Property | Attribute | Description                                                                                                                                                                                                                                                                                      | Type                     | Default     |
+| -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ----------- |
+| `lg`     | `lg`      | The size of the flex item for lg screens, in terms of how many portions it should take up out of the total available.  If `"auto"` is passed, it will be the size of its content.  If nothing or `""` is passed, all flex item without setting the size will share the remaining space equally.  | `"" \| "auto" \| number` | `undefined` |
+| `md`     | `md`      | The size of the flex item for md screens, in terms of how many portions it should take up out of the total available.  If `"auto"` is passed, it will be the size of its content.  If nothing or `""` is passed, all flex item without setting the size will share the remaining space equally.  | `"" \| "auto" \| number` | `undefined` |
+| `sm`     | `sm`      | The size of the flex item for sm screens, in terms of how many portions it should take up out of the total available.  If `"auto"` is passed, it will be the size of its content.  If nothing or `""` is passed, all flex item without setting the size will share the remaining space equally.  | `"" \| "auto" \| number` | `undefined` |
+| `xl`     | `xl`      | The size of the flex item for xl screens, in terms of how many portions it should take up out of the total available.  If `"auto"` is passed, it will be the size of its content.  If nothing or `""` is passed, all flex item without setting the size will share the remaining space equally.  | `"" \| "auto" \| number` | `undefined` |
+| `xs`     | `xs`      | The size of the flex item for xs screens, in terms of how many portions it should take up out of the total available.  If `"auto"` is passed, it will be the size of its content.  If nothing or `""` is passed, all flex item without setting the size will share the remaining space equally.  | `"" \| "auto" \| number` | `undefined` |
+| `xxl`    | `xxl`     | The size of the flex item for xxl screens, in terms of how many portions it should take up out of the total available.  If `"auto"` is passed, it will be the size of its content.  If nothing or `""` is passed, all flex item without setting the size will share the remaining space equally. | `"" \| "auto" \| number` | `undefined` |
 
 
 ----------------------------------------------
