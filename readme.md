@@ -21,9 +21,9 @@ npm i awesome-layout
 ```
 
 ## Usage
-- [Wrap](./src/components/awesome-wrap/readme.md)
 - [Flex](./src/components/awesome-flex/readme.md)
 - [Ratio Box](./src/components/awesome-ratio-box/readme.md)
+- [Wrap](./src/components/awesome-wrap/readme.md)
 
 ## Importing
 
@@ -50,8 +50,8 @@ And make sure you import this JS file using `type="module"` like below.
 ```html
 <script type="module" src="path/to/the/js/file"></script>
 ```
-Note that `type="module"` is an ES6 syntax and only works in modern browsers. 
-You can check [here](https://stenciljs.com/docs/javascript) for more details.
+Note that `type="module"` is an ES6 syntax and only works in modern browsers.  
+You can check [here](https://stenciljs.com/docs/javascript) for more details for Vanilla JS importing.
 
 ### Angular
 Please check [here](https://stenciljs.com/docs/angular) for details. Just make sure you import `defineCustomElements()` from _node_modules/awesome-layout/loader_ instead.
