@@ -4,13 +4,13 @@ import { observeResize } from '../../utils/observe-resize';
 
 
 @Component({
-  tag: 'awesome-container',
-  styleUrl: 'awesome-container.css',
+  tag: 'awesome-wrap',
+  styleUrl: 'awesome-wrap.css',
   shadow: true,
 })
-export class AwesomeContainer implements ComponentInterface {
+export class AwesomeWrap implements ComponentInterface {
 
-  @Element() hostElement: HTMLAwesomeContainerElement;
+  @Element() hostElement: HTMLAwesomeWrapElement;
 
   componentWillLoad() {
     observeResize.call(

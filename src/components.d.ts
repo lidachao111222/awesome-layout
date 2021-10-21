@@ -6,8 +6,6 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface AwesomeContainer {
-    }
     interface AwesomeFlex {
         /**
           * The number of portions that the flex container is split into.
@@ -51,14 +49,10 @@ export namespace Components {
          */
         "widthFactor": number;
     }
+    interface AwesomeWrap {
+    }
 }
 declare global {
-    interface HTMLAwesomeContainerElement extends Components.AwesomeContainer, HTMLStencilElement {
-    }
-    var HTMLAwesomeContainerElement: {
-        prototype: HTMLAwesomeContainerElement;
-        new (): HTMLAwesomeContainerElement;
-    };
     interface HTMLAwesomeFlexElement extends Components.AwesomeFlex, HTMLStencilElement {
     }
     var HTMLAwesomeFlexElement: {
@@ -77,16 +71,20 @@ declare global {
         prototype: HTMLAwesomeRatioBoxElement;
         new (): HTMLAwesomeRatioBoxElement;
     };
+    interface HTMLAwesomeWrapElement extends Components.AwesomeWrap, HTMLStencilElement {
+    }
+    var HTMLAwesomeWrapElement: {
+        prototype: HTMLAwesomeWrapElement;
+        new (): HTMLAwesomeWrapElement;
+    };
     interface HTMLElementTagNameMap {
-        "awesome-container": HTMLAwesomeContainerElement;
         "awesome-flex": HTMLAwesomeFlexElement;
         "awesome-flex-item": HTMLAwesomeFlexItemElement;
         "awesome-ratio-box": HTMLAwesomeRatioBoxElement;
+        "awesome-wrap": HTMLAwesomeWrapElement;
     }
 }
 declare namespace LocalJSX {
-    interface AwesomeContainer {
-    }
     interface AwesomeFlex {
         /**
           * The number of portions that the flex container is split into.
@@ -129,21 +127,23 @@ declare namespace LocalJSX {
          */
         "widthFactor"?: number;
     }
+    interface AwesomeWrap {
+    }
     interface IntrinsicElements {
-        "awesome-container": AwesomeContainer;
         "awesome-flex": AwesomeFlex;
         "awesome-flex-item": AwesomeFlexItem;
         "awesome-ratio-box": AwesomeRatioBox;
+        "awesome-wrap": AwesomeWrap;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "awesome-container": LocalJSX.AwesomeContainer & JSXBase.HTMLAttributes<HTMLAwesomeContainerElement>;
             "awesome-flex": LocalJSX.AwesomeFlex & JSXBase.HTMLAttributes<HTMLAwesomeFlexElement>;
             "awesome-flex-item": LocalJSX.AwesomeFlexItem & JSXBase.HTMLAttributes<HTMLAwesomeFlexItemElement>;
             "awesome-ratio-box": LocalJSX.AwesomeRatioBox & JSXBase.HTMLAttributes<HTMLAwesomeRatioBoxElement>;
+            "awesome-wrap": LocalJSX.AwesomeWrap & JSXBase.HTMLAttributes<HTMLAwesomeWrapElement>;
         }
     }
 }

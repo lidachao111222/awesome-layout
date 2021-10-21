@@ -21,7 +21,7 @@ npm i awesome-layout
 ```
 
 ## Usage
-- [Container](./src/components/awesome-container/readme.md)
+- [Wrap](./src/components/awesome-wrap/readme.md)
 - [Flex](./src/components/awesome-flex/readme.md)
 - [Ratio Box](./src/components/awesome-ratio-box/readme.md)
 
