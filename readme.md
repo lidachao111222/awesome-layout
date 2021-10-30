@@ -22,6 +22,7 @@ npm i awesome-layout
 
 ## Usage
 - [Flex](./src/components/awesome-flex/readme.md)
+- [Parallax](./src/components/awesome-parallax/readme.md)
 - [Ratio Box](./src/components/awesome-ratio-box/readme.md)
 - [Wrap](./src/components/awesome-wrap/readme.md)
 
