@@ -12,7 +12,7 @@ export class AwesomeParallaxLayer implements ComponentInterface {
 
   /**
    * Depth of the layer. 0 is the base layer, negative means farther and positive means nearer.  
-   * Its absolute value should be less than the container's perspective value. 
+   * The value should be less than the container's perspective value. 
    */
   @Prop() depth: number = 0;
 
