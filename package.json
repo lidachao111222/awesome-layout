@@ -1,6 +1,6 @@
 {
   "name": "awesome-layout",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "An awesome way to do layout.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
