@@ -122,9 +122,10 @@ export class AwesomeFlexItem implements ComponentInterface {
   }
 
   private updateFlexCSSVariable(value: string | number) {
+    updateCSSVariable('--max-width', 'calc(var(--fraction) / var(--base-fraction) * 100%)', this.hostElement);
     switch (true) {
       case value !== '' && !Number.isNaN(+value):
-        updateCSSVariable('--flex', '0 0 calc(var(--fraction) / var(--base-fraction) * 100%)', this.hostElement);
+        updateCSSVariable('--flex', '0 0 var(--max-width)', this.hostElement);
         break;
       case value === 'auto':
         updateCSSVariable('--flex', '0 0 auto', this.hostElement);
