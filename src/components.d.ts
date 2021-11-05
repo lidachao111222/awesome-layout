@@ -147,7 +147,7 @@ declare namespace LocalJSX {
         /**
           * Invoke when the content is scrolled.
          */
-        "onContentScroll"?: (event: CustomEvent<{ scrollTop: number, scrollHeight: number }>) => void;
+        "onContentScroll"?: (event: CustomEvent<{ scrollTop: number, scrollHeight: number, viewHeight: number }>) => void;
         /**
           * Perspective of the parallax container.
          */

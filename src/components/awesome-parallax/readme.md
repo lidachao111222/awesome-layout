@@ -14,9 +14,9 @@ Also check [Parallax Layer](../awesome-parallax-layer/readme.md).
 
 ## Events
 
-| Event           | Description                          | Type                                                        |
-| --------------- | ------------------------------------ | ----------------------------------------------------------- |
-| `contentScroll` | Invoke when the content is scrolled. | `CustomEvent<{ scrollTop: number; scrollHeight: number; }>` |
+| Event           | Description                          | Type                                                                            |
+| --------------- | ------------------------------------ | ------------------------------------------------------------------------------- |
+| `contentScroll` | Invoke when the content is scrolled. | `CustomEvent<{ scrollTop: number; scrollHeight: number; viewHeight: number; }>` |
 
 
 ## CSS Custom Properties

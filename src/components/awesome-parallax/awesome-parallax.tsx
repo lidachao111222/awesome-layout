@@ -23,7 +23,7 @@ export class AwesomeParallax implements ComponentInterface {
   /**
    * Invoke when the content is scrolled.
    */
-  @Event() contentScroll: EventEmitter<{ scrollTop: number, scrollHeight: number }>;
+  @Event() contentScroll: EventEmitter<{ scrollTop: number, scrollHeight: number, viewHeight: number }>;
 
   componentDidLoad() {
     this.perspectiveChanged(this.perspective);
@@ -47,7 +47,7 @@ export class AwesomeParallax implements ComponentInterface {
     updateCSSVariable('--parallax-scroll-top-px', target.scrollTop.toString(), this.hostElement);
     updateCSSVariable('--parallax-scroll-height-px', target.scrollHeight.toString(), this.hostElement);
     updateCSSVariable('--parallax-view-height-px', target.clientHeight.toString(), this.hostElement);
-    this.contentScroll.emit({ scrollTop: target.scrollTop, scrollHeight: target.scrollHeight });
+    this.contentScroll.emit({ scrollTop: target.scrollTop, scrollHeight: target.scrollHeight, viewHeight: target.clientHeight });
   }
 
 }
