@@ -12,6 +12,13 @@ Also check [Parallax Layer](../awesome-parallax-layer/readme.md).
 | `perspective` | `perspective` | Perspective of the parallax container. | `number` | `1`     |
 
 
+## Events
+
+| Event           | Description                          | Type                                                        |
+| --------------- | ------------------------------------ | ----------------------------------------------------------- |
+| `contentScroll` | Invoke when the content is scrolled. | `CustomEvent<{ scrollTop: number; scrollHeight: number; }>` |
+
+
 ## CSS Custom Properties
 
 | Name                          | Description                                                                            |

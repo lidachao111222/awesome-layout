@@ -145,6 +145,10 @@ declare namespace LocalJSX {
     }
     interface AwesomeParallax {
         /**
+          * Invoke when the content is scrolled.
+         */
+        "onContentScroll"?: (event: CustomEvent<{ scrollTop: number, scrollHeight: number }>) => void;
+        /**
           * Perspective of the parallax container.
          */
         "perspective"?: number;
