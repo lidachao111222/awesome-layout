@@ -1,9 +1,23 @@
 :host {
+  /**
+   * @prop --parallax-scroll-top-px: It presents how many pixels are scrolled from the top. (Should only read)
+   * @prop --parallax-scroll-height-px: It presents the scroll height in pixel. (Should only read)
+   * @prop --parallax-view-height-px: It presents scroll the outer height of parallax container in pixel. (Should only read)
+   * @prop --parallax-scroll-ratio: It presents scroll ratio of the parallax. (Should only read)
+   */
+
+  --parallax-scroll-ratio: calc(var(--parallax-scroll-top-px) / (var(--parallax-scroll-height-px) - var(--parallax-view-height-px)));
+
   display: block;
+  height: 100%;
+  width: 100%;
+}
+
+#main-container {
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
-  perspective: calc(var(--perspective) * 1px); 
+  perspective: calc(var(--perspective) * 1px);
   height: 100%;
   width: 100%;
 }

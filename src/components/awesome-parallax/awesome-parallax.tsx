@@ -27,9 +27,21 @@ export class AwesomeParallax implements ComponentInterface {
   render() {
     return (
       <Host>
-        <slot></slot>
+        <div
+          id="main-container"
+          onScroll={this.scrollHandler}
+        >
+          <slot></slot>
+        </div>
       </Host>
     );
+  }
+
+  private scrollHandler = (event: UIEvent) => {
+    const target = event.currentTarget as HTMLDivElement;
+    updateCSSVariable('--parallax-scroll-top-px', target.scrollTop.toString(), this.hostElement);
+    updateCSSVariable('--parallax-scroll-height-px', target.scrollHeight.toString(), this.hostElement);
+    updateCSSVariable('--parallax-view-height-px', target.clientHeight.toString(), this.hostElement);
   }
 
 }
