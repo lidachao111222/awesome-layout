@@ -9,12 +9,12 @@
   --container-padding: 0;
 
   /**
-   * @prop --outer-xs: The outer view breakpoint of xs.
-   * @prop --outer-sm: The outer view breakpoint of sm.
-   * @prop --outer-md: The outer view breakpoint of md.
-   * @prop --outer-lg: The outer view breakpoint of lg.
-   * @prop --outer-xl: The outer view breakpoint of xl.
-   * @prop --outer-xxl: The outer view breakpoint of xxl.
+   * @prop --outer-xs: The outer view breakpoint of xs. (Default: 0)
+   * @prop --outer-sm: The outer view breakpoint of sm. (Default: 576)
+   * @prop --outer-md: The outer view breakpoint of md. (Default: 768)
+   * @prop --outer-lg: The outer view breakpoint of lg. (Default: 992)
+   * @prop --outer-xl: The outer view breakpoint of xl. (Default: 1200)
+   * @prop --outer-xxl: The outer view breakpoint of xxl. (Default: 1400)
    */  
    --outer-xs: 0;
    --outer-sm: 576;
