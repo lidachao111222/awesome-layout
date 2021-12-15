@@ -39,18 +39,6 @@ export namespace Components {
          */
         "xxl": number | 'auto' | '';
     }
-    interface AwesomeParallax {
-        /**
-          * Perspective of the parallax container.
-         */
-        "perspective": number;
-    }
-    interface AwesomeParallaxLayer {
-        /**
-          * Depth of the layer. 0 is the base layer, negative means farther and positive means nearer.   The value should be less than the container's perspective value.
-         */
-        "depth": number;
-    }
     interface AwesomeRatioBox {
         /**
           * The factor of height.
@@ -77,18 +65,6 @@ declare global {
         prototype: HTMLAwesomeFlexItemElement;
         new (): HTMLAwesomeFlexItemElement;
     };
-    interface HTMLAwesomeParallaxElement extends Components.AwesomeParallax, HTMLStencilElement {
-    }
-    var HTMLAwesomeParallaxElement: {
-        prototype: HTMLAwesomeParallaxElement;
-        new (): HTMLAwesomeParallaxElement;
-    };
-    interface HTMLAwesomeParallaxLayerElement extends Components.AwesomeParallaxLayer, HTMLStencilElement {
-    }
-    var HTMLAwesomeParallaxLayerElement: {
-        prototype: HTMLAwesomeParallaxLayerElement;
-        new (): HTMLAwesomeParallaxLayerElement;
-    };
     interface HTMLAwesomeRatioBoxElement extends Components.AwesomeRatioBox, HTMLStencilElement {
     }
     var HTMLAwesomeRatioBoxElement: {
@@ -104,8 +80,6 @@ declare global {
     interface HTMLElementTagNameMap {
         "awesome-flex": HTMLAwesomeFlexElement;
         "awesome-flex-item": HTMLAwesomeFlexItemElement;
-        "awesome-parallax": HTMLAwesomeParallaxElement;
-        "awesome-parallax-layer": HTMLAwesomeParallaxLayerElement;
         "awesome-ratio-box": HTMLAwesomeRatioBoxElement;
         "awesome-wrap": HTMLAwesomeWrapElement;
     }
@@ -143,22 +117,6 @@ declare namespace LocalJSX {
          */
         "xxl"?: number | 'auto' | '';
     }
-    interface AwesomeParallax {
-        /**
-          * Invoke when the content is scrolled.
-         */
-        "onContentScroll"?: (event: CustomEvent<{ scrollTop: number, scrollHeight: number, viewHeight: number }>) => void;
-        /**
-          * Perspective of the parallax container.
-         */
-        "perspective"?: number;
-    }
-    interface AwesomeParallaxLayer {
-        /**
-          * Depth of the layer. 0 is the base layer, negative means farther and positive means nearer.   The value should be less than the container's perspective value.
-         */
-        "depth"?: number;
-    }
     interface AwesomeRatioBox {
         /**
           * The factor of height.
@@ -174,8 +132,6 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "awesome-flex": AwesomeFlex;
         "awesome-flex-item": AwesomeFlexItem;
-        "awesome-parallax": AwesomeParallax;
-        "awesome-parallax-layer": AwesomeParallaxLayer;
         "awesome-ratio-box": AwesomeRatioBox;
         "awesome-wrap": AwesomeWrap;
     }
@@ -186,8 +142,6 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "awesome-flex": LocalJSX.AwesomeFlex & JSXBase.HTMLAttributes<HTMLAwesomeFlexElement>;
             "awesome-flex-item": LocalJSX.AwesomeFlexItem & JSXBase.HTMLAttributes<HTMLAwesomeFlexItemElement>;
-            "awesome-parallax": LocalJSX.AwesomeParallax & JSXBase.HTMLAttributes<HTMLAwesomeParallaxElement>;
-            "awesome-parallax-layer": LocalJSX.AwesomeParallaxLayer & JSXBase.HTMLAttributes<HTMLAwesomeParallaxLayerElement>;
             "awesome-ratio-box": LocalJSX.AwesomeRatioBox & JSXBase.HTMLAttributes<HTMLAwesomeRatioBoxElement>;
             "awesome-wrap": LocalJSX.AwesomeWrap & JSXBase.HTMLAttributes<HTMLAwesomeWrapElement>;
         }
